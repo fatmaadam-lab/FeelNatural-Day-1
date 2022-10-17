@@ -1,1 +1,1 @@
-# JS30days-Drum-Kit
+# Drum-Kit - Day 1
