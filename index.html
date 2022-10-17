@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Feel The natural </title>
+</head>
+
+<body>
+    <h1>Feel The Natural </h1>
+    <p>Enter the key</p>
+
+    <div class="keys">
+        <div data-key="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">Sea</span>
+        </div>
+        <div data-key="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">Desert</span>
+        </div>
+        <div data-key="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound">Jungle</span>
+        </div>
+        <div data-key="82" class="key">
+            <kbd>R</kbd>
+            <span class="sound">Rain</span>
+        </div>
+
+
+
+        <audio data-key="83" src="sounds/sea.wav"></audio>
+        <audio data-key="68" src="sounds/desert.wav"></audio>
+        <audio data-key="74" src="sounds/jungle.wav"></audio>
+        <audio data-key="82" src="sounds/rain.wav"></audio>
+    </div>
+
+
+    <script>
+        window.addEventListener('keydown', (e) => {
+            /*
+                This function Listen to the keyborad
+                when ever it has clicked you hear a sound related to it with adding new backround image
+            */
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`) // select audio by data-key 
+            if (!audio) return; // stop the function while is no audio for the key
+            audio.currentTime = 0;
+            audio.play();
+
+            // Adding new background image
+            document.body.style.background = `linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url('img/${e.keyCode}.jpeg') no-repeat`;
+            document.body.style.backgroundSize ="cover";
+        })
+
+    </script>
+</body>
+
+</html>
