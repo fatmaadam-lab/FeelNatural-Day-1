@@ -4,8 +4,8 @@ An app tracking user keyborad system and when ever user select (S, D, J, R) the 
 <br><br>
 <img src="https://github.com/fatmaadam-lab/FeelNatural-Day-1/blob/main/img/bg-Github.png" width=100% height=100%>
 
-
-<br><br><br><br>
+<a href="https://fatmaadam-lab.github.io/FeelNatural.github.io/">Full page view</a>
+<br><br>
 <h3>This an application for <a href="https://javascript30.com" >#javascript30</a> challenges</h3>
 
 Day1 challenge : 
