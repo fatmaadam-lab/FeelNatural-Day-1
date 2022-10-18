@@ -13,6 +13,8 @@
     <h1>Feel The Natural </h1>
     <p>Enter the key</p>
 
+    <!-- Keyborad keys -->
+
     <div class="keys">
         <div data-key="83" class="key">
             <kbd>S</kbd>
@@ -22,6 +24,8 @@
             <kbd>D</kbd>
             <span class="sound">Desert</span>
         </div>
+    </div>
+    <div class="keys">
         <div data-key="74" class="key">
             <kbd>J</kbd>
             <span class="sound">Jungle</span>
@@ -30,18 +34,17 @@
             <kbd>R</kbd>
             <span class="sound">Rain</span>
         </div>
-
-
-
-        <audio data-key="83" src="sounds/sea.wav"></audio>
-        <audio data-key="68" src="sounds/desert.wav"></audio>
-        <audio data-key="74" src="sounds/jungle.wav"></audio>
-        <audio data-key="82" src="sounds/rain.wav"></audio>
     </div>
 
 
+    <!-- Audio files -->
+    <audio data-key="83" src="sounds/sea.wav"></audio>
+    <audio data-key="68" src="sounds/desert.wav"></audio>
+    <audio data-key="74" src="sounds/jungle.wav"></audio>
+    <audio data-key="82" src="sounds/rain.wav"></audio>
+
     <script>
-        window.addEventListener('keydown', (e) => {
+        function chooseYourNatural(e) {
             /*
                 This function Listen to the keyborad
                 when ever it has clicked you hear a sound related to it with adding new backround image
@@ -54,9 +57,10 @@
             // Adding new background image
             document.body.style.background = `linear-gradient(rgba(0, 0, 0, 0.7),
             rgba(0, 0, 0, 0.7)), url('img/${e.keyCode}.jpeg') no-repeat`;
-            document.body.style.backgroundSize ="cover";
-        })
+            document.body.style.backgroundSize = "cover";
+        };
 
+        window.addEventListener('keydown', chooseYourNatural);
     </script>
 </body>
 
